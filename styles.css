@@ -1,0 +1,312 @@
+/* ====================================
+   General & Reset Styles
+   ==================================== */
+:root {
+    --primary-color: #007bff; /* أزرق */
+    --secondary-color: #6c757d; /* رمادي */
+    --accent-color: #28a745; /* أخضر لزر الإجراء (CTA) */
+    --background-light: #f8f9fa;
+    --background-white: #ffffff;
+    --text-dark: #343a40;
+    --text-light: #ffffff;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    /* دعم RTL للغة العربية */
+    direction: rtl; 
+    text-align: right;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ====================================
+   Header & Navigation
+   ==================================== */
+.header {
+    background-color: var(--text-dark);
+    padding: 15px 0;
+    box-shadow: var(--shadow-light);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-right: 25px;
+    margin-left: 0; 
+}
+
+.nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--text-light);
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* ====================================
+   Footer
+   ==================================== */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--text-light);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* ====================================
+   Button Styles (Shared)
+   ==================================== */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+.btn-accent:hover {
+    background-color: #1e7e34;
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   Browse Cars Page - Car Card Styles
+   ==================================== */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.car-card {
+    background-color: var(--background-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-details {
+    padding: 20px;
+}
+
+.card-details h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.car-price {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: 10px;
+}
+
+/* ====================================
+   Contact Page - Form & Info Styles
+   ==================================== */
+.contact-form-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    background-color: var(--background-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+.contact-info strong {
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-top: 10px;
+}
+
+/* ====================================
+   Details Page Styles
+   ==================================== */
+.car-details-container { 
+    display: flex; 
+    gap: 40px; 
+    padding: 40px 0; 
+    flex-wrap: wrap; 
+}
+.gallery { 
+    flex: 2; 
+    min-width: 300px; 
+}
+.specs-sidebar { 
+    flex: 1; 
+    min-width: 250px; 
+    background-color: var(--background-white); 
+    padding: 25px; 
+    border-radius: 8px; 
+    box-shadow: var(--shadow-light); 
+}
+.main-image { 
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+}
+.spec-list { 
+    list-style: none; 
+    padding: 0; 
+}
+.spec-list li { 
+    padding: 10px 0; 
+    border-bottom: 1px dashed #eee; 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 1.1em;
+}
+.spec-list li strong { 
+    color: var(--primary-color); 
+}
+
+/* أنماط المعرض المصغر */
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    overflow-x: auto; 
+    padding-bottom: 10px;
+}
+.thumbnail-gallery img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.thumbnail-gallery img:hover, .thumbnail-gallery img.active {
+    border-color: var(--primary-color);
+}
+
+
+/* ====================================
+   Responsive Design
+   ==================================== */
+@media (max-width: 768px) {
+    /* Header/Nav Mobile */
+    .nav {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0; 
+        background-color: var(--text-dark);
+        z-index: 1000;
+        padding: 10px 0;
+    }
+    .nav.active {
+        display: block;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Contact & Details Page layout change */
+    .contact-form-section, .car-details-container {
+        flex-direction: column;
+    }
+    .main-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+}

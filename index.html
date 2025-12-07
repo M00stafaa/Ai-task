@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarConnect - الرئيسية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo"><a href="index.html">CarConnect</a></div>
+            <nav class="nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="browse.html">تصفح السيارات</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" style="
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: var(--text-light); 
+            text-align: center; 
+            padding: 100px 20px;">
+            <div class="container hero-content">
+                <h1>ابحث عن مركبتك القادمة، بكل سهولة.</h1>
+                <p class="lead" style="font-size: 1.3em; margin: 20px 0;">
+                    **CarConnect** هي المنصة الرائدة التي تربط **بائعي السيارات** بـ **المشترين** الحقيقيين. 
+                </p>
+                <a href="browse.html" class="btn btn-accent btn-large" style="font-size: 1.1em;">تصفح القوائم الآن</a>
+            </div>
+        </section>
+
+        <section class="mission" style="padding: 40px 0; text-align: center;">
+            <div class="container">
+                <h2 style="color: var(--primary-color); margin-bottom: 15px;">مهمتنا</h2>
+                <p style="max-width: 800px; margin: 0 auto; font-size: 1.1em;">
+                    تبسيط تجربة بيع وشراء السيارات من خلال توفير منصة آمنة وسهلة الاستخدام.
+                </p>
+            </div>
+        </section>
+
+        <section class="featured-cars" style="padding: 40px 0;">
+            <div class="container">
+                <h2 style="color: var(--primary-color); text-align: center; margin-bottom: 30px;">🔥 أحدث السيارات المميزة</h2>
+                
+                <div class="car-grid">
+                    <article class="car-card">
+                        <img src="images/car_main.jpg" alt="2023 Toyota Highlander">
+                        <div class="card-details">
+                            <h3>تويوتا هايلاندر</h3>
+                            <p><strong>السنة:</strong> 2023 | <strong>الماركة:</strong> تويوتا</p>
+                            <p>عدد أميال منخفض، سيارة عائلية كاملة المواصفات. حالة ممتازة.</p>
+                            <p class="car-price">42,500$</p>
+                            <a href="details.html" class="btn btn-primary" style="margin-top: 10px;">عرض التفاصيل</a>
+                        </div>
+                    </article>
+
+                    <article class="car-card">
+                        <img src="images/car_other.jpg" alt="2020 BMW M3">
+                        <div class="card-details">
+                            <h3>بي إم دبليو M3 Competition</h3>
+                            <p><strong>السنة:</strong> 2020 | <strong>الماركة:</strong> بي إم دبليو</p>
+                            <p>سيدان عالية الأداء، تصميم داخلي نظيف، تاريخ خدمة متوفر.</p>
+                            <p class="car-price">78,000$</p>
+                            <a href="details.html" class="btn btn-primary" style="margin-top: 10px;">عرض التفاصيل</a>
+                        </div>
+                    </article>
+
+                    <article class="car-card">
+                        <img src="images/car_main.jpg" alt="1967 Ford Mustang">
+                        <div class="card-details">
+                            <h3>فورد موستانج</h3>
+                            <p><strong>السنة:</strong> 1967 | <strong>الماركة:</strong> فورد</p>
+                            <p>سيارة عضلات أمريكية كلاسيكية. تم ترميمها بالكامل وجاهزة للعرض.</p>
+                            <p class="car-price">95,900$</p>
+                            <a href="details.html" class="btn btn-primary" style="margin-top: 10px;">عرض التفاصيل</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="browse.html" class="btn btn-accent">شاهد جميع القوائم (أكثر من 120 سيارة)</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 CarConnect. جميع الحقوق محفوظة.</p>
+            <p>مصممة لربط البائعين والمشترين عالميًا. <a href="contact.html">اتصل بنا</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').onclick = function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
